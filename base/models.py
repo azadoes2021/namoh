@@ -42,8 +42,8 @@ class Collectingdb(models.Model):
     # [중요 title 없앨것입니다]
     # title = models.CharField(max_length=100, verbose_name='제목', default='') 
 
-    cate001 = models.CharField(max_length=30, choices=CATE001_CHOICES, null=True, verbose_name='미용실/애견미용실')
-    dhname = models.CharField(max_length=50 ,null=True, verbose_name='미용실명')
+    # cate001 = models.CharField(max_length=30, choices=CATE001_CHOICES, null=True, verbose_name='미용실/애견미용실')
+    # dhname = models.CharField(max_length=50 ,null=True, verbose_name='미용실명')
     name = models.CharField(max_length=50 ,null=True, verbose_name='성함')
     age = models.CharField(max_length=50 ,null=True, verbose_name='나이')
     number = models.CharField(max_length=50 ,null=True, verbose_name='연락처')
