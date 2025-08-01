@@ -52,7 +52,7 @@
 <!-- javascript  -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <!-- custom javascript -->
- <!-- <script src="js/main.js" ></script> -->
+ 
 </head>
 
 
@@ -276,6 +276,18 @@ footer .copyright {
   width: 100%;
   /* border-top: 1px solid #555; */
 }
+.contact form .inputBox input, .contact form textarea {
+    height: 4rem;
+    width: 49%;
+    /* width: 100%; */
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 2rem;
+    border: .2rem solid #b8b8b8;
+    background: none;
+    text-transform: none;
+    color: #000;
+}
 @media screen and (max-width: 500px) {
   footer {
     width: 100%;
@@ -303,18 +315,7 @@ footer .copyright {
 }
 }
 
-.contact form .inputBox input, .contact form textarea {
-    height: 4rem;
-    width: 49%;
-    /* width: 100%; */
-    padding: 0 1rem;
-    margin: 1rem 0;
-    font-size: 2rem;
-    border: .2rem solid #b8b8b8;
-    background: none;
-    text-transform: none;
-    color: #000;
-}
+
 
 </style>
 <body style="background: lightgray;">
@@ -392,35 +393,10 @@ footer .copyright {
             <!-- <div class="inputBox"> -->
             <!-- <label for="{{ field.id_for_label }}" class="">주소<span style="color: red;">*</span></label> -->
             <input name="{{ field.name }}" type="text" placeholder="거주지(예시: 대전시 유성구)" id="{{ field.id_for_label }}">
-            <!-- <select name="{{ field.name }}" class="" id="{{ field.id_for_label }}">
-                <option value="">- 지역선택 -</option>
-                <option value="서울(서울이남)">서울(서울이남)</option>              
-                <option value="서울(서울이북)">서울(서울이북)</option>              
-                <option value="경기북부">경기북부</option>
-                <option value="경기남부">경기남부</option>
-                <option value="인천광역시">인천광역시</option>
-                <option value="강원도">강원도</option>
-                <option value="충청남도">충청남도</option>
-                <option value="대전광역시">대전광역시</option>
-                <option value="충청북도">충청북도</option>
-                <option value="세종시">세종시</option>
-                <option value="부산광역시">부산광역시</option>
-                <option value="울산광역시">울산광역시</option>
-                <option value="대구광역시">대구광역시</option>
-                <option value="경상북도">경상북도</option>
-                <option value="경상남도">경상남도</option>
-                <option value="전라남도">전라남도</option>
-                <option value="광주광역시">광주광역시</option>
-                <option value="전라북도">전라북도</option>
-                <option value="제주시">제주시</option>
-            </select>  -->
+            
             </div>            
             
-            {% elif field.name == 'promoperson' %}  
-            <!-- <div class="inputBox">
-            <label for="{{ field.id_for_label }}" class="">추천인<span style="color: red;">*</span></label>
-            <input name="{{ field.name }}" type="text" placeholder="추천인" id="{{ field.id_for_label }}">
-            </div> -->
+            
             {% elif field.name == 'terms_confirmed' %}
             
             <div id="myDIV" onscroll="myFunction()">
