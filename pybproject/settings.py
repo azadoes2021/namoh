@@ -44,7 +44,7 @@ SECRET_KEY = get_secret("SECRET_KEY")
 DEBUG = True 
 
 
-ALLOWED_HOSTS =['210.114.22.52', 'namoh.cafe24.com', '127.0.0.1']
+ALLOWED_HOSTS =['210.114.22.52', 'namoh114.cafe24.com', '127.0.0.1']
 
 
 # Application definition
