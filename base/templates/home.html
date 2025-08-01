@@ -49,6 +49,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <!-- custom css -->
 <link rel="stylesheet" href="{% static 'css/style2.css' %}">
 <!-- javascript  -->
@@ -388,7 +389,7 @@ footer .copyright {
             {% elif field.name == 'number' %}
             <div class="inputBox">
             <!-- <label for="{{ field.id_for_label }}" class="">연락처<span style="color: red;">*</span></label> -->
-            <input name="{{ field.name }}" type="text" placeholder="010" id="{{ field.id_for_label }}">
+            <input name="{{ field.name }}" type="text" placeholder="연락처 010" id="{{ field.id_for_label }}">
             <!-- </div> -->
             {% elif field.name == 'address001' %}
             <!-- <div class="inputBox"> -->
@@ -595,7 +596,7 @@ footer .copyright {
     
     
   </form>
-    <a href="tel:1566-2071"><button class="btn" style="background-color: green;">전화상담 1566-2071</button></a>
+    <a href="tel:1566-2071"><button class="btn" style="background-color: green;"><span> <i class="ri-phone-fill"> </i></span>전화연결</button></a>
 </section>
 
 
