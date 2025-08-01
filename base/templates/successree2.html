@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    
+    <title>가위달인</title>
+    <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="author" content="ThemeZaa">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+        <meta name="description" content="Elevate your online presence with Crafto - a modern, versatile, multipurpose Bootstrap 5 responsive HTML5, SCSS template using highly creative 48+ ready demos.">
+    
+        <meta content="가위달인" name="title">
+        <meta name="keywords" content="가위달인, 미용실, 애견미용실" />
+        <meta name="description" content="최고 수준의 가위 연마 솔루션 제공" />
+        <meta content="가위달인 홈페이지" property="og:title">
+        <meta content="가위달인" property="og:site_name">
+        <meta content="최고 수준의 가위 연마 솔루션 제공하기 위해 노력하고 있습니다. 함께 건강한 공기를 만들어갑니다." property="og:description">
+        <meta content="가위달인, 미용가위, 애견미용가위, 미용실, 애견미용실, 미용, 애견미용" property="og:keyword">
+        <meta content="website" property="og:type">
+        <meta content="" property="og:url">
+    <!-- <meta content="" property="og:image"> -->
+        
+        <!-- <link href="https://pagefyt.com/"  rel="canoninal"> -->
+    <meta name="author" content="" />
+    <meta name="copyright" content="" />
+    <meta name="robots" content="All" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="HandheldFriendly" content="true">
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="full-screen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Head Phone</title>
+<!-- css -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- custom css -->
+<link rel="stylesheet" href="{% static 'css/style2.css' %}">
+<!-- javascript  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- custom javascript -->
+ <!-- <script src="js/main.js" ></script> -->
+</head>
+
+
+<style>
+  section {
+    max-width: 800px;
+    margin: auto;
+  }
+  #landingpic {
+    width: 100%;
+    margin-top: 80px;
+  }
+  #rbbtn {
+    position: fixed;
+    text-align: center;
+    font-size: 5rem;
+    width: 15rem;
+    height: 15rem;
+    padding: 2rem;
+    right: 5%;
+    top: 30%;
+    /* border: 1px solid #000; */
+    border-radius: 50%;
+    /* color: white; */
+    background: rgba(0,58,131,0.8);
+  }
+  a:visited {color:white}
+  #menu {
+    border: 1px solid #fff;
+    padding: 1rem;
+  }
+  #myDIV {
+    height: 100px;
+    width: 100%;
+    overflow: auto;
+    font-size: 2.0rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    display: none;
+}
+#myDIV.agree_active {
+  display: block;
+}
+#successsubtext3 {
+  font-size: 4rem;
+}
+#successsubtext2 {
+  font-size: 3rem;
+}
+  @media (max-width:500px) {
+  
+  /* #landingpic {
+    width: 100%;
+  } */
+}
+
+
+header .navbar ul li a {
+    font-size: 2rem;
+    margin-left: 2rem;
+    color: #fff;
+    position: relative;
+    border: 1px solid #fff;
+    padding: 1rem;
+    
+}
+</style>
+<body>
+  
+<!-- <header>
+  <a href="{% url 'home' %}" class="logo"><i class="fas fa-home"></i>Sotoplus</a>
+  <div id="menu" class="" ><a class="active" href="{% url 'home' %}">상담신청</a></div>  
+  <nav class="navbar">
+    <ul>      
+    </ul>
+  </nav>
+</header> --> 
+<!-- <div id="rbbtn"><a href="#contact">검사 <br> 신청 </a></div> -->
+<section>
+	<div style="margin: 160px 0 160px 0;">
+			<h2 id="successsubtext3" style="text-align: center;">신청완료
+			</h2>
+			<br>
+			<br>
+			<!-- <h3 id="successsubtext2" style="text-align: center;">빠르게 연락드리겠습니다. -->
+			</h3>
+			<br>
+			<br>
+			<div style="text-align: center;"><button class="btn" style="text-align: center;"><a href="{% url 'home' %}" style="color: white;">신청페이지로 이동</a></button></div>
+    </div>
+
+		<br>
+			
+      <!-- <button class="layui-btn buttonHover" style="height: 55px;font-size: 18px;"><a href="{% url 'home' %}" style="color: white;background-color: #7f4a2a;text-align: center;border-bottom-color: #7f4a2a;">홈으로 이동</a></button> -->
+			
+	
+</section>	
+</body>
+</html>

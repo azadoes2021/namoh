@@ -1,0 +1,270 @@
+:root {
+  --blue:#2273f8;
+}
+
+* {
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  /* transition: all .2s linear; */
+
+  text-transform: capitalize;
+}
+
+*::selection {
+  background: var(--blue);
+  color: #fff;
+}
+
+html {
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+.btn {
+  font-size: 2rem;
+  padding: 0.7rem 3.5rem;
+  border-radius: 5rem;
+  color: #fff;
+  /* background: var(--blue); */
+  background: #003a83;
+  margin-top: 1rem;
+  box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+/* .btn::before {
+
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0%;
+  background:#332;
+  z-index: -1;
+  transition: .2s linear;
+}
+.btn:hover::before {
+  left: 0;
+  width: 100%;
+} */
+
+.heading {
+  padding: 0.5rem 2rem;
+  font-size: 2.5rem;
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--blue);
+  display: inline-block;
+  margin: 1rem 0;
+}
+.title {
+  font-size: 4rem;
+  color: #332;
+  padding: 0 1rem;
+  text-align: center;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 2rem 7%;
+  /* background: var(--blue); */
+  background: #003a83;
+}
+header .logo {
+  font-size: 2.5rem;
+  color: #fff;
+}
+header .logo i {
+  padding: 0 .5rem;
+}
+header .navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+header .navbar ul li a {
+  font-size: 2rem;
+  margin-left: 2rem;
+  color: #fff;
+  position: relative;
+}
+header .navbar ul li a::before {
+  content: '';
+  position: absolute;
+  bottom: -0.5rem;
+  right: 0;
+  width: 0%;
+  height: .2rem;
+  background: #fff;
+  transition: .2s linear;
+}
+header .navbar ul li a.active::before,
+/* header .navbar ul li a:hover::before {
+  width: 100%;
+  left: 0;
+} */
+header #menu {
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+
+/* Contact */
+.contact {
+  min-height: 70rem;
+  text-align: center;
+  background: rgb(252 252 252);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 1rem;
+  padding-top: 3rem;
+}
+.contact .heading {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.contact .title {
+  color: #fff;
+
+}
+
+.contact form {
+  width: 85%;
+  margin: 1rem auto;
+}
+.contact form .inputBox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact form .inputBox input, .contact form textarea {
+  height: 4rem;
+  width: 49%;
+  /* width: 100%; */
+  padding: 0 1rem;
+  margin: 1rem 0;
+  font-size: 2rem;
+  border: .2rem solid #b8b8b8;
+  background: none;
+  text-transform: none;
+  color: #000;  
+}
+.inputBox select {
+    height: 4rem;
+    width: 49%;
+    /* width: 100%; */
+    padding: 0 1rem;
+    margin: 1rem 0;
+    font-size: 2rem;
+    border: .2rem solid #b8b8b8;
+    background: none;
+    text-transform: none;
+    color: #000;
+}
+.contact form .inputBox input::placeholder, .contact form textarea::placeholder {
+  /* color: #ccc; */
+}
+.contact form .inputBox input:focus, .contact form textarea:focus {
+  border-color:var(--blue) ;
+}
+.contact form textarea {
+  height: 20rem;
+  width: 100%;
+  padding: 1rem;
+  resize: none;
+}
+/* .contact form .btn:hover {
+  background: #fff;
+  color: #332;
+} */
+/* RWD */
+@media (max-width:768px) {
+  html {
+    font-size: 9px;
+  }
+  header #menu {
+    display: block;
+  }
+  header .navbar {
+    position: fixed;
+    top: -120%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    /* opacity: 0; */
+  }
+  header .navbar ul {
+    padding: 2rem 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+  header .navbar ul li a {
+    font-size: 2.5rem;
+    color: #332;
+    display: block;
+    margin: 1rem 0;
+  }
+  header .navbar ul li a::before {
+    background: #332;
+  }
+  .fa-times {
+    transform: rotate(180deg);
+  }
+  header .navbar.nav-toggle {
+    top: 7.4rem;
+    opacity: 1;
+  }
+  .home .content {
+    text-align: center;
+  }
+  .features .description {
+    width: auto;
+    padding: 1rem;
+  }
+  .contact form {
+    width: 95%;
+  }
+}
+@media (max-width:500px) {
+  html {
+    font-size: 8px;
+  }
+  .home .content h1 {
+    font-size: 3.5rem;
+  }
+  .about .image img {
+    width: 80%;
+    height: auto;
+  }
+  .contact form .inputBox input {
+    width: 100%;
+  }
+  .inputBox select {
+    
+    width: 100%;
+
+}
+.contact {
+  min-height: 95rem;
+}
+}
