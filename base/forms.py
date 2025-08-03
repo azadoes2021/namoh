@@ -3,10 +3,7 @@ from .models import Collectingdb
          
 class CollectingdbForm(forms.Form):
     cate001 = forms.CharField(
-        error_messages={
-            'required': '이름 또는 상호를 입력해주세요.'
-        },
-        max_length=64, label='이름(상호)'
+        required=False, max_length=64,
     )
     
     # dhname = forms.CharField(
