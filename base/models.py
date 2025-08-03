@@ -47,7 +47,7 @@ class Collectingdb(models.Model):
     # subject02 = models.CharField(max_length=50, choices=SUBJECT02_CHOICES, null=True, verbose_name='과세유형')
     # learn django - the easyway [youtube]
     # author = models.ForeignKey(User, related_name='blog_posts')
-    body = models.TextField(null=True,verbose_name='내용')
+    # body = models.TextField(null=True,verbose_name='내용')
     created = models.DateTimeField(auto_now_add=True, verbose_name='등록일')
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='신규', verbose_name='status')
