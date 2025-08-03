@@ -36,10 +36,7 @@ class CollectingdbForm(forms.Form):
         required=False, max_length=64,
     )
     reservation = forms.CharField(
-        error_messages={
-            'required': '전화번호를 입력해주세요.'
-        },
-        max_length=64, label='전화번호'
+        required=False, max_length=64,
     )
     
     carnumbers = forms.CharField(
