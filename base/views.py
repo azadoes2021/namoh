@@ -48,7 +48,7 @@ class CollectdbView(FormView):
 
 def successori2(request): 
     send_mail(
-        '[대전하늘채] 신청 접수가 들어왔습니다.',
+        '[대전 하늘채] 신청 접수가 들어왔습니다.',
         '신청 접수가 들어왔습니다. 관리자페이지를 확인해주세요! https://namoh114.cafe24.com/admin/',
         'bluewate02@naver.com',
         ['namoh114@gmail.com'],
