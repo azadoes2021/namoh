@@ -20,9 +20,18 @@ class Collectingdb(models.Model):
     )
     CATE002_CHOICES = (
         ('남성','남성'),
-        ('여성','여성'),
-        
+        ('여성','여성'),        
     )
+    CATE003_CHOICES = (
+        ('20대','20대'),
+        ('30대','30대'),
+        ('40대','40대'),
+        ('50대','50대'),
+        ('60대','60대'),
+        ('70대','70대'),
+        ('80대','80대'),        
+    )
+    
     # [중요 title 없앨것입니다]
     # title = models.CharField(max_length=100, verbose_name='제목', default='') 
 
@@ -31,7 +40,7 @@ class Collectingdb(models.Model):
 
     # dhname = models.CharField(max_length=50 ,null=True, verbose_name='미용실명')
     name = models.CharField(max_length=50 ,null=True, verbose_name='성함')
-    age = models.CharField(max_length=50 ,null=True, verbose_name='연령대')
+    age = models.CharField(max_length=30, choices=CATE003_CHOICES, null=True, verbose_name='성별')
     number = models.CharField(max_length=50 ,null=True, verbose_name='연락처')
     carnumbers = models.CharField(max_length=50 ,null=True, verbose_name='차량번호')
     reservation = models.CharField(max_length=50 ,null=True, verbose_name='예약날짜')

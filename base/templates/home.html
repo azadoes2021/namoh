@@ -403,8 +403,17 @@ footer .copyright {
             </div>
             {% elif field.name == 'age' %}  
             <div class="inputBox">
-            <label for="{{ field.id_for_label }}" class="">연령대<span style="color: red;">*</span></label>
-            <input name="{{ field.name }}" type="text" placeholder="연령대" id="{{ field.id_for_label }}">
+              <label for="{{ field.id_for_label }}" class="">연령대<span style="color: red;">*</span></label>
+            <select name="{{ field.name }}" class="" id="{{ field.id_for_label }}">
+                <option value="">- 연령대 -</option>
+                <option value="20대">20대</option>              
+                <option value="30대">30대</option>
+                <option value="40대">40대</option>
+                <option value="50대">50대</option>
+                <option value="60대">60대</option>
+                <option value="70대">70대</option>                              
+                <option value="80대">80대</option>                                              
+            </select>
             </div>
             {% elif field.name == 'number' %}
             <div class="inputBox">
