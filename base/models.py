@@ -40,7 +40,7 @@ class Collectingdb(models.Model):
 
     # dhname = models.CharField(max_length=50 ,null=True, verbose_name='미용실명')
     name = models.CharField(max_length=50 ,null=True, verbose_name='성함')
-    age = models.CharField(max_length=30, choices=CATE003_CHOICES, null=True, verbose_name='성별')
+    age = models.CharField(max_length=30, choices=CATE003_CHOICES, null=True, verbose_name='연령대')
     number = models.CharField(max_length=50 ,null=True, verbose_name='연락처')
     carnumbers = models.CharField(max_length=50 ,null=True, verbose_name='차량번호')
     reservation = models.CharField(max_length=50 ,null=True, verbose_name='예약날짜')
