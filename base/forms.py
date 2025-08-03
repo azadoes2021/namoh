@@ -19,10 +19,7 @@ class CollectingdbForm(forms.Form):
         max_length=64, label='이름(상호)'
     )
     age = forms.CharField(
-        error_messages={
-            'required': '이름 또는 상호를 입력해주세요.'
-        },
-        max_length=64, label='이름(상호)'
+        required=False, max_length=64,
     )
     number = forms.CharField(
         error_messages={
@@ -31,18 +28,12 @@ class CollectingdbForm(forms.Form):
         max_length=64, label='전화번호'
     )
     cate002 = forms.CharField(
-        error_messages={
-            'required': '이름 또는 상호를 입력해주세요.'
-        },
-        max_length=64, label='이름(상호)'
+        required=False, max_length=64,
     )
 
 
     address001 = forms.CharField(
-        error_messages={
-            'required': '이름 또는 상호를 입력해주세요.'
-        },
-        max_length=100, label='이름(상호)'
+        required=False, max_length=64,
     )
     reservation = forms.CharField(
         error_messages={
@@ -52,10 +43,7 @@ class CollectingdbForm(forms.Form):
     )
     
     carnumbers = forms.CharField(
-        error_messages={
-            'required': '이름 또는 상호를 입력해주세요.'
-        },
-        max_length=64, label='이름(상호)'
+        required=False, max_length=64,
     )
     # address002 = forms.CharField(
     #     error_messages={
