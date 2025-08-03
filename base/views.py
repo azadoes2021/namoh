@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import CollectingdbForm
 from django.views.generic.edit import FormView
+from django.core.mail import send_mail
 
 class HomeView(FormView):
     # model = Post     
@@ -46,12 +47,12 @@ class CollectdbView(FormView):
 
 
 def successori2(request): 
-    # send_mail(
-    #     '[SOTOPLUS] 검사 신청 접수가 들어왔습니다.',
-    #     '검사 신청 접수가 들어왔습니다. 관리자페이지를 확인해주세요! https://sotoplus.co.kr/admin/',
-    #     'bluewate02@naver.com',
-    #     ['bluewate02@naver.com'],
-    # )
+    send_mail(
+        '신청 접수가 들어왔습니다.',
+        '신청 접수가 들어왔습니다. 관리자페이지를 확인해주세요! https://namoh114.cafe24.com/admin/',
+        'bluewate02@naver.com',
+        ['bluewate02@naver.com'],
+    )
     return redirect("successree2")
 
 def successree2(request): 
