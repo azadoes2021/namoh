@@ -51,7 +51,7 @@ def successori2(request):
         '[대전 하늘채] 신청 접수가 들어왔습니다.',
         '신청 접수가 들어왔습니다. 관리자페이지를 확인해주세요! https://namoh114.cafe24.com/admin/',
         'bluewate02@naver.com',
-        ['namoh114@gmail.com'],
+        ['namoh114@naver.com'],
     )
     return redirect("successree2")
 
