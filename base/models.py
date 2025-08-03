@@ -13,15 +13,30 @@ class Collectingdb(models.Model):
         ('진행중','진행중'),
         ('보류','보류'),
     )
-    
+    CATE001_CHOICES = (
+        ('모델하우스','모델하우스'),
+        ('홍보관','홍보관'),
+        
+    )
+    CATE002_CHOICES = (
+        ('남성','남성'),
+        ('여성','여성'),
+        
+    )
     # [중요 title 없앨것입니다]
     # title = models.CharField(max_length=100, verbose_name='제목', default='') 
 
-    # cate001 = models.CharField(max_length=30, choices=CATE001_CHOICES, null=True, verbose_name='미용실/애견미용실')
+    cate001 = models.CharField(max_length=30, choices=CATE001_CHOICES, null=True, verbose_name='분류')
+    cate002 = models.CharField(max_length=30, choices=CATE002_CHOICES, null=True, verbose_name='성별')
+
     # dhname = models.CharField(max_length=50 ,null=True, verbose_name='미용실명')
     name = models.CharField(max_length=50 ,null=True, verbose_name='성함')
     age = models.CharField(max_length=50 ,null=True, verbose_name='나이')
     number = models.CharField(max_length=50 ,null=True, verbose_name='연락처')
+    carnumbers = models.CharField(max_length=50 ,null=True, verbose_name='차량번호')
+    reservation = models.CharField(max_length=50 ,null=True, verbose_name='예약날짜')
+    
+
     # email = models.EmailField(max_length=50 ,null=True, verbose_name='이메일')
 
     # promoperson = models.CharField(max_length=24, default='없음', verbose_name="추천인")   
@@ -32,7 +47,7 @@ class Collectingdb(models.Model):
     # subject02 = models.CharField(max_length=50, choices=SUBJECT02_CHOICES, null=True, verbose_name='과세유형')
     # learn django - the easyway [youtube]
     # author = models.ForeignKey(User, related_name='blog_posts')
-    # body = models.TextField(null=True,verbose_name='내용')
+    body = models.TextField(null=True,verbose_name='내용')
     created = models.DateTimeField(auto_now_add=True, verbose_name='등록일')
     updated = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='신규', verbose_name='status')

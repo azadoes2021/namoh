@@ -2,12 +2,13 @@ from django import forms
 from .models import Collectingdb
          
 class CollectingdbForm(forms.Form):
-    # cate001 = forms.CharField(
-    #     error_messages={
-    #         'required': '이름 또는 상호를 입력해주세요.'
-    #     },
-    #     max_length=64, label='이름(상호)'
-    # )
+    cate001 = forms.CharField(
+        error_messages={
+            'required': '이름 또는 상호를 입력해주세요.'
+        },
+        max_length=64, label='이름(상호)'
+    )
+    
     # dhname = forms.CharField(
     #     error_messages={
     #         'required': '이름 또는 상호를 입력해주세요.'
@@ -32,11 +33,32 @@ class CollectingdbForm(forms.Form):
         },
         max_length=64, label='전화번호'
     )
+    cate002 = forms.CharField(
+        error_messages={
+            'required': '이름 또는 상호를 입력해주세요.'
+        },
+        max_length=64, label='이름(상호)'
+    )
+
+
     address001 = forms.CharField(
         error_messages={
             'required': '이름 또는 상호를 입력해주세요.'
         },
         max_length=100, label='이름(상호)'
+    )
+    reservation = forms.CharField(
+        error_messages={
+            'required': '전화번호를 입력해주세요.'
+        },
+        max_length=64, label='전화번호'
+    )
+    
+    carnumbers = forms.CharField(
+        error_messages={
+            'required': '이름 또는 상호를 입력해주세요.'
+        },
+        max_length=64, label='이름(상호)'
     )
     # address002 = forms.CharField(
     #     error_messages={
@@ -101,13 +123,15 @@ class CollectingdbForm(forms.Form):
 
     def clean(self):        
         cleaned_data = super().clean()
-        # cate001 = cleaned_data.get('cate001')        
+        cate001 = cleaned_data.get('cate001')        
+        cate002 = cleaned_data.get('cate002')        
         # dhname = cleaned_data.get('dhname')        
         name = cleaned_data.get('name')        
         age = cleaned_data.get('age')        
         number = cleaned_data.get('number')
         address001 = cleaned_data.get('address001')        
-        # address002 = cleaned_data.get('address002')        
+        carnumbers = cleaned_data.get('carnumbers')        
+        reservation = cleaned_data.get('reservation')        
 
         # name = cleaned_data.get('name')        
         # promoperson = cleaned_data.get('promoperson')
@@ -130,12 +154,15 @@ class CollectingdbForm(forms.Form):
         if name or number:
 
             collectingdb = Collectingdb(
-                # cate001 = cate001,
+                cate001 = cate001,
+                cate002 = cate002,
                 # dhname = dhname,
                 name = name,
                 age = age,
                 number = number,
                 address001 = address001,
+                carnumbers = carnumbers,
+                reservation = reservation,
                 # address002 = address002,
                 # promoperson = promoperson,
                 # subject = subject,
