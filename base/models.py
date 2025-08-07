@@ -35,15 +35,15 @@ class Collectingdb(models.Model):
     # [중요 title 없앨것입니다]
     # title = models.CharField(max_length=100, verbose_name='제목', default='') 
 
-    cate001 = models.CharField(max_length=30, choices=CATE001_CHOICES, null=True, verbose_name='분류')
-    cate002 = models.CharField(max_length=30, choices=CATE002_CHOICES, null=True, verbose_name='성별')
+    # cate001 = models.CharField(max_length=30, choices=CATE001_CHOICES, null=True, verbose_name='분류')
+    # cate002 = models.CharField(max_length=30, choices=CATE002_CHOICES, null=True, verbose_name='성별')
 
     # dhname = models.CharField(max_length=50 ,null=True, verbose_name='미용실명')
     name = models.CharField(max_length=50 ,null=True, verbose_name='성함')
-    age = models.CharField(max_length=30, choices=CATE003_CHOICES, null=True, verbose_name='연령대')
+    # age = models.CharField(max_length=30, choices=CATE003_CHOICES, null=True, verbose_name='연령대')
     number = models.CharField(max_length=50 ,null=True, verbose_name='연락처')
-    carnumbers = models.CharField(max_length=50 ,null=True, verbose_name='차량번호')
-    reservation = models.CharField(max_length=50 ,null=True, verbose_name='예약날짜')
+    # carnumbers = models.CharField(max_length=50 ,null=True, verbose_name='차량번호')
+    # reservation = models.CharField(max_length=50 ,null=True, verbose_name='예약날짜')
     
 
     # email = models.EmailField(max_length=50 ,null=True, verbose_name='이메일')
@@ -69,7 +69,7 @@ class Collectingdb(models.Model):
     # dbname = models.CharField(max_length=20, default='', verbose_name='dbname')
     # dbnamekr = models.CharField(max_length=20, default='', verbose_name='DB종류')
     # address001 = models.CharField(max_length=10, choices=ADDRESS001_CHOICES, null=True, verbose_name='지역')
-    address001 = models.CharField(max_length=120 ,null=True, verbose_name='거주지')        
+    # address001 = models.CharField(max_length=120 ,null=True, verbose_name='거주지')        
     # address002 = models.CharField(max_length=50 ,null=True, verbose_name='주소2')        
     # 추천인정보
     # promoperson = models.CharField(max_length=50 ,null=True, verbose_name='추천인')        

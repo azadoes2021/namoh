@@ -278,8 +278,8 @@ footer .copyright {
 }
 .contact form .inputBox input, .contact form textarea {
     height: 4rem;
-    /* width: 49%; */
-    width: 100%;
+    width: 49%;
+    /*width: 100%;*/
     padding: 0 1rem;
     margin: 1rem 0;
     font-size: 2rem;
@@ -378,64 +378,18 @@ footer .copyright {
         {% endif %}
         {% for field in form %}
             
-            {% if field.name == 'cate001' %}
+            
+            {% if field.name == 'name' %}  
             <div class="inputBox">
-            <label for="{{ field.id_for_label }}" class="">방문예약 종류<span style="color: red;">*</span></label>
-            <select name="{{ field.name }}" class="" id="{{ field.id_for_label }}">
-                <option value="">- 방문예약 -</option>
-                <option value="모델하우스">모델하우스</option>              
-                <option value="홍보관">홍보관</option>                              
-            </select>
-            </div>
-            {% elif field.name == 'cate002' %}
-            <div class="inputBox">
-              <label for="{{ field.id_for_label }}" class="">성별<span style="color: red;">*</span></label>
-            <select name="{{ field.name }}" class="" id="{{ field.id_for_label }}">
-                <option value="">- 성별 -</option>
-                <option value="남성">남성</option>              
-                <option value="여성">여성</option>                              
-            </select>
-            </div>
-            {% elif field.name == 'name' %}  
-            <div class="inputBox">
-            <label for="{{ field.id_for_label }}" class="">성함<span style="color: red;">*</span></label>
+            <!-- <label for="{{ field.id_for_label }}" class="">성함<span style="color: red;">*</span></label> -->
             <input name="{{ field.name }}" type="text" placeholder="성함" id="{{ field.id_for_label }}">
-            </div>
-            {% elif field.name == 'age' %}  
-            <div class="inputBox">
-              <label for="{{ field.id_for_label }}" class="">연령대<span style="color: red;">*</span></label>
-            <select name="{{ field.name }}" class="" id="{{ field.id_for_label }}">
-                <option value="">- 연령대 -</option>
-                <option value="20대">20대</option>              
-                <option value="30대">30대</option>
-                <option value="40대">40대</option>
-                <option value="50대">50대</option>
-                <option value="60대">60대</option>
-                <option value="70대">70대</option>                              
-                <option value="80대">80대</option>                                              
-            </select>
-            </div>
+            
             {% elif field.name == 'number' %}
-            <div class="inputBox">
-            <label for="{{ field.id_for_label }}" class="">연락처<span style="color: red;">*</span></label>
+            
+            <!-- <label for="{{ field.id_for_label }}" class="">연락처<span style="color: red;">*</span></label> -->
             <input name="{{ field.name }}" type="text" placeholder="연락처 010" id="{{ field.id_for_label }}">
             </div>
-            {% elif field.name == 'address001' %}
-            <div class="inputBox">
-            <label for="{{ field.id_for_label }}" class="">거주지<span style="color: red;">*</span></label>
-            <input name="{{ field.name }}" type="text" placeholder="거주지(예시: 대전시 유성구)" id="{{ field.id_for_label }}">
-            </div>            
-
-            {% elif field.name == 'carnumbers' %}
-            <div class="inputBox">
-            <label for="{{ field.id_for_label }}" class="">차량번호<span style="color: red;">*</span></label>
-            <input name="{{ field.name }}" type="text" placeholder="차량번호" id="{{ field.id_for_label }}">
-            </div>
-            {% elif field.name == 'reservation' %}
-            <div class="inputBox">
-            <label for="{{ field.id_for_label }}" class="">예약일<span style="color: red;">*</span></label>
-            <input name="{{ field.name }}" type="date" placeholder="예약일" id="{{ field.id_for_label }}">
-            </div>
+            
 
 
             </div>            
